@@ -1,4 +1,4 @@
-public class Main {
+public class Arrays {
     public static void main(String[] args)  {
         System.out.println("hello :)");
         // NOTE: The following input values will be used for testing your solution.
