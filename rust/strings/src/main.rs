@@ -1,24 +1,29 @@
+use std::collections::HashMap;
+
 fn main() {
     println!("Hello, worldz!");
 
-    non_repeating("abcab"); // should return 'c'
-    non_repeating("abab"); // should return None
-    non_repeating("aabbbc"); // should return 'c'
-    non_repeating("aabbdbc"); // should return 'd'
+    let abcab: &str = "abcab";
+    let abab: &str = "abab";
+    let aabbbc: &str = "aabbbc";
+    let aabbdbc: &str = "aabbdbc";
+
+    println!("{}", non_repeating(abcab)); // should return 'c'
+    println!("{}", non_repeating(abab)); // should return " "
+    println!("{}", non_repeating(aabbbc)); // should return 'c'
+    println!("{}", non_repeating(aabbdbc)); // should return 'd'
 }
 
-fn non_repeating(given_string: &mut str) -> char {
-    let char_count = vec![];
-    for c in given_string.chars() {
-        if (char_count.contains(c)) {
-            char_count[c] += 1;
-        } else {
-            char_count[c] = 1;
-        }
+fn non_repeating(s: &str) -> char {
+    let mut m: HashMap<char, i32> = HashMap::new();
+    for c in s.chars() {
+        let count = m.entry(c).or_insert(0);
+        *count += 1;
     }
-    for c in given_string.chars() {
-        if char_count[c] == 1 {
+    for c in s.chars() {
+        if m[&c] == 1 {
             return c;
         }
     }
+    return ' ';
 }
