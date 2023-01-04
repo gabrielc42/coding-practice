@@ -12,3 +12,5 @@ Cargo.lock
 # Makefiles
 /Makefile
 **/Makefile
+Makefile
+Makefile.in
