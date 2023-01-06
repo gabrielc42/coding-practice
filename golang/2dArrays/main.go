@@ -1,26 +1,36 @@
 package main
 
+import "fmt"
+
 func main() {
-	bombs1 := [][]uint8{
+	bombs1 := [][]int8{
 		{0, 2},
 		{2, 0},
 	}
-	mineSweeper(bombs1, 3, 3)
+	// mineSweeper(bombs1, 3, 3) should return:
+	// [[0, 1, -1],
+	//  [1, 21, 1],
+	//  [-1, 1, 0]]
+
+	fmt.Printf("%d", mineSweeper(bombs1, 3, 3))
+
 }
 
-func mineSweeper(a [][]uint8, b int, c int) {
-	field := make([][]uint8, b)
+func mineSweeper(a [][]int8, b int, c int) [][]int8 {
+	field := make([][]int8, b)
 	for i := range field {
-		field[i] = make([]uint8, c)
+		field[i] = make([]int8, c)
 	}
-	bomb := make([]uint, b)
-	for bomb := range a {
-		rowIdx := bomb[0]
-		colIdx := bomb[1]
-		field[rowIdx][colIdx] = -1
-		for i := rowIdx - 1; i < rowIdx+2; i++ {
-			for j := colIdx - 1; j < colIdx+2; j++ {
-				if 0 <= 1 && i < b && 0 <= j && j < c && field[i][j] != -1 {
+	bomb := make([]int, b)
+	rowIdx := 0
+	colIdx := 0
+	for i := 0; i < len(a); i++ {
+		bomb[0] = rowIdx
+		bomb[1] = colIdx
+		field[rowIdx][colIdx] = 0
+		for i := rowIdx; i < rowIdx; i++ {
+			for j := colIdx; j < colIdx; j++ {
+				if 0 <= 1 && i < b && 0 <= j && j < c && field[i][j] != 0 {
 					field[i][j] += 1
 				}
 			}
