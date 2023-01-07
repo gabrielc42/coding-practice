@@ -9,7 +9,7 @@ func main() {
 	}
 	// mineSweeper(bombs1, 3, 3) should return:
 	// [[0, 1, -1],
-	//  [1, 21, 1],
+	//  [1, 2, 1],
 	//  [-1, 1, 0]]
 
 	fmt.Printf("%d", mineSweeper(bombs1, 3, 3))
