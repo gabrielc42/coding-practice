@@ -1,3 +1,5 @@
+package strings;
+
 import java.util.HashMap;
 
 public class Strings {
@@ -8,23 +10,22 @@ public class Strings {
         nonRepeating("aabbbc"); // should return 'c'
         nonRepeating("aabbdbc"); // should return 'd'
 
-
         // NOTE: The following input values will be used for testing your solution.
-        isOneAway("abcde", "abcd");  // should return true
-        isOneAway("abde", "abcde");  // should return true
-        isOneAway("a", "a");  // should return true
-        isOneAway("abcdef", "abqdef");  // should return true
-        isOneAway("abcdef", "abccef");  // should return true
-        isOneAway("abcdef", "abcde");  // should return true
-        isOneAway("aaa", "abc");  // should return false
-        isOneAway("abcde", "abc");  // should return false
-        isOneAway("abc", "abcde");  // should return false
-        isOneAway("abc", "bcc");  // should return false
+        isOneAway("abcde", "abcd"); // should return true
+        isOneAway("abde", "abcde"); // should return true
+        isOneAway("a", "a"); // should return true
+        isOneAway("abcdef", "abqdef"); // should return true
+        isOneAway("abcdef", "abccef"); // should return true
+        isOneAway("abcdef", "abcde"); // should return true
+        isOneAway("aaa", "abc"); // should return false
+        isOneAway("abcde", "abc"); // should return false
+        isOneAway("abc", "abcde"); // should return false
+        isOneAway("abc", "bcc"); // should return false
     }
 
     // Implement your solution below.
     public static Character nonRepeating(String s) {
-        //traverse string
+        // traverse string
         int count = 0;
         HashMap<Character, Integer> charCount = new HashMap<Character, Integer>();
         for (char c : s.toCharArray()) {
@@ -36,7 +37,8 @@ public class Strings {
             }
         }
         for (char c : s.toCharArray()) {
-            if (charCount.get(c) == 1) return c;
+            if (charCount.get(c) == 1)
+                return c;
         }
         return null;
     }

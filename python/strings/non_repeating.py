@@ -13,7 +13,7 @@ def non_repeating(given_string):
     
 
 # NOTE: The following input values will be used for testing your solution.
-non_repeating("abcab") # should return 'c'
-non_repeating("abab") # should return None
-non_repeating("aabbbc") # should return 'c'
-non_repeating("aabbdbc") # should return 'd'
+print(non_repeating("abcab")) # should return 'c'
+print(non_repeating("abab")) # should return None
+print(non_repeating("aabbbc")) # should return 'c'
+print(non_repeating("aabbdbc")) # should return 'd'

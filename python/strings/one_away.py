@@ -12,7 +12,7 @@ def one_away_same_length(s1, s2):
   count_diff = 0
   for i in range(len(s1)):
     if not s1[i] == s2[i]:
-      count_dif += 1
+      count_diff += 1
       if count_diff > 1:
         return False
   return True
@@ -32,13 +32,13 @@ def one_away_diff_lengths(s1, s2):
 
   
 # NOTE: The following input values will be used for testing your solution.
-is_one_away("abcde", "abcd")  # should return True
-is_one_away("abde", "abcde")  # should return True
-is_one_away("a", "a")  # should return True
-is_one_away("abcdef", "abqdef")  # should return True
-is_one_away("abcdef", "abccef")  # should return True
-is_one_away("abcdef", "abcde")  # should return True
-is_one_away("aaa", "abc")  # should return False
-is_one_away("abcde", "abc")  # should return False
-is_one_away("abc", "abcde")  # should return False
-is_one_away("abc", "bcc")  # should return False
+print(one_away("abcde", "abcd"))  # should return True
+print(one_away("abde", "abcde"))  # should return True
+print(one_away("a", "a"))  # should return True
+print(one_away("abcdef", "abqdef"))  # should return True
+print(one_away("abcdef", "abccef"))  # should return True
+print(one_away("abcdef", "abcde"))  # should return True
+print(one_away("aaa", "abc"))  # should return False
+print(one_away("abcde", "abc"))  # should return False
+print(one_away("abc", "abcde"))  # should return False
+print(one_away("abc", "bcc"))  # should return False
