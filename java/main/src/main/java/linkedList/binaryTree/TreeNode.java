@@ -2,9 +2,10 @@ package linkedList.binaryTree;
 
 import java.util.Objects;
 
+
 // Use this class to create binary trees.
 public class TreeNode {
-    int value;
+    Integer value;
     TreeNode left;
     TreeNode right;
 
