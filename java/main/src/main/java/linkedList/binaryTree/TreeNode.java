@@ -5,9 +5,10 @@ import java.util.Objects;
 
 // Use this class to create binary trees.
 public class TreeNode {
-    Integer value;
+    int value;
     TreeNode left;
     TreeNode right;
+
 
     TreeNode(int value, TreeNode left, TreeNode right) {
         this.value = value;
@@ -28,6 +29,8 @@ public class TreeNode {
     // Will be used for testing.
     @Override
     public String toString() {
+        String output = String.valueOf("null".equals(value) ? null : value);
+        if (output == null) return "null";
         return String.valueOf(value);
     }
 }

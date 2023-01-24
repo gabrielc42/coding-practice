@@ -59,6 +59,8 @@ public class lowestCommon {
     }
 
     public static TreeNode lca(TreeNode root, int j, int k) {
+//        if (root == null) return root;
+
         Stack<TreeNode> pathToJ = pathToX(root, j);
         Stack<TreeNode> pathToK = pathToX(root, k);
         if (pathToJ == null || pathToK == null) {
