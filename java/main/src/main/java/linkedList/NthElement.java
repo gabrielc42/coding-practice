@@ -1,6 +1,6 @@
 package linkedList;
 
-public class nthElement {
+public class NthElement {
   public static void main(String[] args) {
     // NOTE: The following input values will be used for testing your solution.
     Node current = new Node(1, null);
