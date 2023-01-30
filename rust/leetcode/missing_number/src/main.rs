@@ -1,9 +1,9 @@
-#[derive(Debug)]
+// no. 268
+
 fn main() {
     let nums: Vec<i32> = [9, 6, 4, 2, 3, 5, 7, 0, 1].to_vec();
-    
+
     println!("{}", missing_number(nums)); //8
-    assert_eq!
 }
 
 pub fn missing_number(nums: Vec<i32>) -> i32 {

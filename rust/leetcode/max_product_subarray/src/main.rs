@@ -1,3 +1,5 @@
+// no. 152
+
 fn main() {
     let nums: Vec<i32> = [2, 3, -2, 4].to_vec();
     println!("{}", max_product(nums)); //6
