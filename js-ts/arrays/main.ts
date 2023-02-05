@@ -3,7 +3,7 @@ console.log("hello :()");
 console.log("hello :()");
 
 
-const rotate_array = (list1, list2) => {
+const rotate_array_ts = (list1, list2) => {
   if (list1.length != list2.length) {
     return false;
   }
