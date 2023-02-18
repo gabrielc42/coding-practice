@@ -37,4 +37,18 @@ fn main() {
     // let vec_ptr: &'static i32 = &life_vec[0];
 
     // println!("{}", unsafe { *vec_ptr }); // safe
+
+    struct MyStruct<'a> {
+        ptr: &'a i32,
+    }
+
+    fn my_function<'a>(x: &'a i32) -> &'a i32 {
+        x
+    }
+
+    let x = 5;
+    let y = MyStruct { ptr: &x };
+    let z = my_function(&x);
+
+    println!("{} {} {}", x, unsafe { *y.ptr }, unsafe { *z });
 }
