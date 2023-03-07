@@ -1,4 +1,4 @@
-package twoDmArray;
+package TwoDmArrays;
 
 import java.util.Arrays;
 

@@ -3,7 +3,7 @@ package linkedList.binaryTree;
 import java.util.HashMap;
 import java.util.Stack;
 
-public class binaryTreeOne {
+public class BinaryTreeOne {
     public static void main(String[] args) {
         // NOTE: The following input values will be used for testing your solution.
         // The mapping we're going to use for constructing a tree.
