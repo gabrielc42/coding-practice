@@ -1,4 +1,4 @@
-﻿# coding-practice [Javascript and Typescript]
+﻿# coding-practice [Javascript]
 
 ## [mapsFilterReduce study](https://www.crocoder.dev/blog/map-filter-reduce-exercises/)
 

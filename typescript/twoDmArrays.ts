@@ -1,17 +1,17 @@
-bombs1 = [
+const tsBombs1 = [
   [0, 2],
   [2, 0]
 ]
 
-console.log(minesweeper(bombs1, 3, 3));
+console.log(tsMinesweeper(tsBombs1, 3, 3));
 // [[0, 1, -1],
 // [1, 2, 1],
 // [-1, 1, 0]]
 
-function minesweeper(bombs, numRows, numCols) {
-  var field = [];
+function tsMinesweeper(bombs: number[][], numRows: number, numCols: number) {
+  var field: number[] = [];
   for (var i = 0; i < numRows; i++) {
-    field[i] = [];
+    field[i] = 0;
     for (var j = 0; j < numCols; j++) {
       field[i][j] = 0;
     }
